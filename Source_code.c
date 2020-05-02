@@ -1,10 +1,19 @@
 #include <stdio.h>
+#include <stdlib.h>
+/* 
+Guess what, the line below is suppoded to be in a file called readme.md, 
+this is the file where other user would come and read inorder to understand
+what youre repo is for
+
+it saves the time of going through your code to understand it
+*/
+
 //this program tells u d month of year based on the number u pick (1 - 12)
 
 int main()
 {
 	int month, year ;
-	int ans;
+	char ans;
 	puts("\t\t CALENDER\t\t");
 	printf("\tEnter the month number (1-12): ");
 	scanf("%d", &month);
@@ -13,8 +22,8 @@ int main()
 	{
 		printf("The month has 30 days.\nDo you want to know what month it is exactly? ");
 		printf("\n 1- Yeah sure. \n 2- Nah I'm good.\n\t\t   ");
-		scanf("%d", &ans); //try using getchar()
-		if(ans==1)
+		scanf(" %c", &ans); //add a space before %c to compensate for the unused \n(enter key) from the above scanf
+		if(ans=='a')
 		{
 			printf(" Input the month number again: ");
 			scanf("%d", &month);
@@ -30,7 +39,7 @@ int main()
 			else
 			puts("That's not a month with 30 days");
 		}
-		else if (ans == 2)
+		else if (ans == 'b')
 		puts("Your loss. ");
 		
 	}
